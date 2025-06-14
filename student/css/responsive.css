@@ -1,0 +1,102 @@
+/* Responsive CSS for UBus Management */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 767px) {
+    .head-with-nav {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    
+    .head-with-nav ul {
+        margin-left: 0;
+        margin-top: 15px;
+        justify-content: center;
+    }
+    
+    .user-logout {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .footer-menu {
+        display: block;
+    }
+    
+    .user-box {
+        padding: 15px;
+    }
+    
+    .Book-button {
+        width: 100%;
+    }
+}
+
+/* Small mobile devices */
+@media only screen and (max-width: 479px) {
+    .login h1 {
+        font-size: 40px;
+    }
+    
+    .login h2 {
+        font-size: 20px;
+    }
+    
+    .form-group {
+        width: 100%;
+    }
+    
+    .form-button {
+        width: 100%;
+    }
+    
+    .forgot {
+        width: 100%;
+    }
+    
+    .tbl-data {
+        overflow: auto;
+    }
+    
+    .showSchoolList li {
+        font-size: 10px;
+        display: inline-block;
+        width: 18%;
+        vertical-align: top;
+    }
+}
+
+/* Hide footer menu on desktop */
+@media only screen and (min-width: 768px) {
+    .footer-menu {
+        display: none;
+    }
+} 

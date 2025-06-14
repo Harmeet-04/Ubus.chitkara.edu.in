@@ -1,0 +1,21 @@
+{
+  "name": "ubus-management",
+  "version": "1.0.0",
+  "description": "UBus Management System for Chitkara University",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": [
+    "ubus",
+    "chitkara",
+    "university",
+    "transportation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+} 

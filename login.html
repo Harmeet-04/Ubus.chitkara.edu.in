@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <link rel="icon" type="image/x-icon" href="student/images/fevicon.svg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="student/css/custom.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="student/css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>UBus Management</title>
+	<script src="https://www.google.com/recaptcha/api.js?render=6Lcjx7whAAAAADQ2hrIzNjtCah6kdprFgJVYAKxH"></script>
+	<style>
+		.forgot { display: flex;align-items: center;justify-content: center;width: 326px;color:#000000; }
+		.forgot:hover {text-decoration:underline;font-weight:bold;}
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 326px;
+        }
+        .input-box {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .form-group {
+            width: 100% !important;
+        }
+        .form-button {
+            width: 100% !important;
+        }
+        .forgot {
+            width: 100% !important;
+        }
+	</style>
+<script>
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6Lcjx7whAAAAADQ2hrIzNjtCah6kdprFgJVYAKxH', {action: 'submit'}).then(function(token) {
+              var response=document.getElementById('token_response');
+              response.value = token;
+          });
+        });
+			 
+	function forgotPassword() {
+		document.location.href="forgot";
+	}
+  </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="login">
+            <h1>U</h1>
+            <h2>BUS</h2>
+            <div style="font-size:16px; font-weight:bold;">PUNJAB CAMPUS</div>
+			
+            <div class="login-container">
+                <form id="loginForm" action="javascript:void(0);" name="userregistration" autocomplete="off" method="get" accept-charset="utf-8" class="form-container">
+                    <!-- Login Form -->
+                    <input type="hidden" readonly="readonly" name="token_response" id="token_response">
+                    <div class="login-form">
+                        <div class="input-box">
+                            <div class="form-group">
+                                <img src="student/images/user-icon.svg" alt="Icon" />
+                                <input type="text" autocomplete="off" name="username" placeholder="Username" maxlength="50"/>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="form-group">
+                                <img src="student/images/lock-icon.svg" alt="Icon" />
+                                <input autocomplete="off" type="password" name="password" placeholder="Password" maxlength="20" />
+                            </div>
+                        </div>
+                        <input type="submit" name="insert" value="Sign In" class="form-button btn btn-success btn-lg btn-block" style="background: #E3000F; border-radius: 6px; font-weight: 600; font-size: 16px; line-height: 24px; color: #ffffff; display: flex; align-items: center; justify-content: center; border: 1px solid #E3000F; cursor: pointer;" />
+                        <div class="forgot">
+                            <p style="font-size:11px;cursor:pointer;color:#000000;font-family:Verdana, Arial, Helvetica, sans-serif;" onclick="forgotPassword();">Forgot your password? Click here</p>
+                        </div>
+                        
+                        <div class="email-text">
+                            <p style="font-size:11px;">Questions? Email us at </p>
+                            <a style="font-size:11px;" href="mailto:ubus@chitkara.edu.in" target="_blank">ubus@chitkara.edu.in</a>
+                        </div>
+                        
+                        <div class="email-text">
+                            <p style="font-size:14px;">Copyright ©2025 Chitkara University  </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+	
+	<style>
+		ul.showSchoolList {margin: 10px 0px 0px 0px;  padding: 0px;max-width: 800px;  margin: 0 auto;  text-align: center;}
+		.showSchoolList li {margin: 3px 0px;list-style: none;  padding:5px 10px;  text-align: center;  font-size: 13px;  border-left: 1px solid #ccc;  display: inline;}
+		.showSchoolList li:first-child{border-left:0px;}
+		@media only screen and (max-width: 743px) {
+			.showSchoolList li{font-size: 10px;display: inline-block;  width: 18%;  vertical-align: top;}
+		}
+	</style>
+	<section class="desktop-copy-right" style="display:block;width:100%;clear: both;">
+		<ul class="showSchoolList">	 
+			<li>
+				<a href="#" onclick="getShowContent(1);" data-toggle="modal" data-target="#flipFlop" >
+				About Us
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="getShowContent(2);" data-toggle="modal" data-target="#flipFlop" >
+				Contact Us
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="getShowContent(3);" data-toggle="modal" data-target="#flipFlop" >
+				Terms & Conditions
+				</a>
+			</li>
+			<li>
+				<a href="#" onclick="getShowContent(4);" data-toggle="modal" data-target="#flipFlop" >
+				Refund & Cancellation
+				</a>
+			</li>		
+			<li>
+				<a href="#" onclick="getShowContent(5);" data-toggle="modal" data-target="#flipFlop">
+				Privacy Policy
+				</a>
+			</li>						
+		</ul>
+	</section>
+			 
+	<!-- Modal -->
+    <div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modalLabel"></h4>
+                </div>
+                <div class="modal-body" id="divContent"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+			
+    <script>
+        function getShowContent(id) {
+            url = 'policy/getContent';
+            $.ajax({
+                type: "POST",
+                url: url,
+                dataType: "json",
+                data: {type:id},
+                beforeSend: function() {},
+                success: function(result) {
+                    $("#modalLabel").html(result.heading);
+                    $("#divContent").html(result.html);
+                },
+                complete: function() {},
+                error: function(data) {
+                    alert("some Error");
+                }
+            });
+        }
+
+        // Handle login form submission
+        $(document).ready(function() {
+            $("#loginForm").submit(function(e) {
+                e.preventDefault();
+                window.location.href = "dashboard.html";
+            });
+        });
+    </script>
+</body>
+
+</html> 
